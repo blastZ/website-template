@@ -14,3 +14,27 @@ function onClick(element) {
   var captionText = $("#caption")[0];
   captionText.innerHTML = element.alt;
 }
+
+function toggleNavBar() {
+    var navBar = $('#small-nav-bar');
+    var classList = navBar.attr('class').split(' ');
+    if(classList.length === 6) {
+        navBar.addClass('w3-show');
+    }else {
+        navBar.removeClass('w3-show');
+    }
+}
+
+var map, marker;
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 30.274084, lng: 120.15507000000002},
+    zoom: 8,
+    scrollwheel: false,
+    draggable: false
+  });
+  marker = new google.maps.Marker({
+      position: {lat: 30.274084, lng: 120.15507000000002},
+      map: map
+  })
+}
