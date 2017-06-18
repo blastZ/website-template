@@ -38,3 +38,12 @@ function initMap() {
       map: map
   })
 }
+
+var footer = new Vue({
+    el: '#footer',
+    methods: {
+        toTop: function() {
+            $(document).scrollTop(0);
+        }
+    }
+});

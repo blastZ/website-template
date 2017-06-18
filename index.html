@@ -155,12 +155,12 @@
             <button class="w3-button w3-light-gray w3-padding-large" style="margin-top: 64px;">LOAD MORE</button>
         </div>
     </div>
-    <div id="modal01" class="w3-black w3-modal" onClick="this.style.display='none'" style="display: none;">
-        <span class="w3-button w3-display-topright">
+    <div id="modal01" class="w3-modal" onClick="this.style.display='none'" style="display: none; background-color: rgba(0,0,0,0.8)">
+        <span class="w3-button w3-display-topright w3-text-white w3-transparent">
             <i class="fa fa-remove"></i>
         </span>
-        <div class="w3-center w3-text-white w3-animate-zoom">
-            <img id="img01">
+        <div class="w3-modal-content w3-padding-64 w3-transparent w3-center w3-text-white w3-animate-zoom" style="max-height: 100%">
+            <img id="img01" class="w3-image">
             <p id="caption" class="w3-xlarge"></p>
         </div>
     </div>
@@ -196,8 +196,8 @@
             </div>
         </div>
     </div>
-    <div class="w3-black w3-opacity-min w3-hover-opacity-off w3-container w3-center w3-padding-64">
-        <a class="w3-button w3-round-medium w3-light-gray" href="#home">To the top</a>
+    <footer id="footer" class="w3-black w3-opacity-min w3-hover-opacity-off w3-container w3-center w3-padding-64">
+        <button class="w3-button w3-round-medium w3-light-gray" v-on:click="toTop">To the top</button>
         <div class="w3-xlarge w3-margin-top w3-wide">
             <i class="fa fa-facebook-official w3-hover-opacity"></i>
             <i class="fa fa-instagram w3-hover-opacity"></i>
@@ -206,8 +206,9 @@
             <i class="fa fa-twitter w3-hover-opacity"></i>
             <i class="fa fa-linkedin w3-hover-opacity"></i>
         </div>
-    </div>
+    </footer>
     <script src="js/jquery-3.2.0.min.js"></script>
+    <script src="js/vue.js"></script>
     <script src="js/main.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQwGrxv0G8j-tHGDB5MVP5Xg5ls0ULHZk&callback=initMap" async defer></script>
 </body>
